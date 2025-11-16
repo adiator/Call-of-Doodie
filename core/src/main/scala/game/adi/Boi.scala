@@ -39,9 +39,11 @@ class Boi extends GameEntity(0.3) {
     private def rotate(player: Player): Unit = {
         val centerX = getX + getWidth / 2
         val centerY = getY + getHeight / 2
+        val playerX = player.getX() + player.getWidth / 2
+        val playerY = player.getY() + player.getHeight / 2
 
-        val xdiff = centerX - player.getX()
-        val ydiff = centerY - player.getY()
+        val xdiff = centerX - playerX
+        val ydiff = centerY - playerY
 
         val angle = MathUtils.atan2(ydiff, xdiff) * MathUtils.radiansToDegrees + 90
 

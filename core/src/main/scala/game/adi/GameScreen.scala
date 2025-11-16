@@ -20,6 +20,7 @@ class GameScreen(game: CallOfDoodie) extends Screen {
 
 
     override def show(): Unit = {
+
         stage = new Stage(new ScreenViewport())
         camera = stage.getCamera.asInstanceOf[OrthographicCamera]
 
